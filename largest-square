@@ -4,11 +4,9 @@ def largest_square(a, b):
     hi = (a + b) // 4
     
     while lo <= hi:
-        m  = lo + ((hi - lo + 1) // 2)
-        n  = a // m
-        n += b // m
+        m = lo + ((hi - lo + 1) // 2)
         
-        if n < 4:
+        if ((a // m) + (b // m)) < 4:
             hi = m - 1
         else:
             r  = m
