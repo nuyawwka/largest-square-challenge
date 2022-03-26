@@ -1,5 +1,5 @@
 def largest_square(a, b):
-    r = 1
+    r = 0
     s = 1
     t = (a + b) // 4
     
