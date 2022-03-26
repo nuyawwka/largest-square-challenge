@@ -1,20 +1,20 @@
 def largest_square(a, b):
-    r = 0
-    s = 1
-    t = (a + b) // 4
+    r  = 0
+    lo = 1
+    hi = (a + b) // 4
     
-    while s <= t:
-        m  = (s + t) // 2
+    while lo <= hi:
+        m  = lo + ((hi - lo + 1) // 2)
         n  = a // m
         n += b // m
         
         if n < 4:
-            t = m - 1
+            hi = m - 1
         else:
-            r = m
-            s = m + 1
+            r  = m
+            lo = m + 1
                     
     return r
 
-n = largest_square(100, 92)
+n = largest_square(13, 11)
 print(n)
